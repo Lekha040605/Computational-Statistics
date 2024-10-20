@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+product = ['computer', 'monitor', 'laptop', 'printer', 'tablet']
+quantity = [320, 450, 300, 120, 280]
+fig, axs = plt.subplots(2, figsize=(8, 6))
+axs[0].barh(product, quantity)
+axs[0].set_title('H-Plot of Product Quantities')
+axs[0].set_xlabel('Quantity')
+axs[0].set_ylabel('Product')
+axs[1].bar(product, quantity)
+axs[1].set_title('Bar Plot of Product Quantities')
+axs[1].set_xlabel('Product')
+axs[1].set_ylabel('Quantity')
+axs[1].tick_params(axis='x', rotation=45)
+fig.tight_layout()
+plt.show()
